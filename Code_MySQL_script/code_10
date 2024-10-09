@@ -16,4 +16,4 @@ FROM Output1
  SELECT Output1.division, Output1.product_code, Output1.product, Output2.Total_sold_quantity, Output2.Rank_Order
  FROM Output1 JOIN Output2
  ON Output1.product_code = Output2.product_code
-WHERE Output2.Rank_Order IN (1,2,3)
+WHERE Output2.Rank_Order IN (1,2,3);
