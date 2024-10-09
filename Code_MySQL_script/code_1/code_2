@@ -1,0 +1,9 @@
+use gdb023;
+select * 
+from dim_customer;
+#*1
+select market
+from dim_customer
+where customer = 'Atliq Exclusive'
+and region = 'APAC'
+group by market;
