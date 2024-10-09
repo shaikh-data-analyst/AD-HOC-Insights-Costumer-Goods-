@@ -1,0 +1,12 @@
+#2
+with cte_1 as 
+(select count(distinct product_code) as x
+from fact_sales_monthly
+where fiscal_year = 2020),
+cte_2 as 
+(select count(distinct product_code) as y
+from fact_sales_monthly
+where fiscal_YEAR = 2021)
+Select cte_1.x as Unique_products_2020, cte_2.y as Unique_products_2021, 
+round((cte_2.y - cte_1.x) / (cte_1.x) *100) as Percentage_change 
+from cte_1 join cte_2;
