@@ -14,4 +14,4 @@ FROM
 (SELECT SUM(Gross_sales_mln) AS total FROM Output) A,
 (SELECT * FROM Output) B
 )
-ORDER BY percentage DESC 
+ORDER BY percentage DESC;
